@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guy In Bankruptcy Coin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d4a017; /* Orange Background */
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            padding: 20px;
+            font-size: 36px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .container {
+            max-width: 900px;
+            padding: 20px;
+            position: relative;
+        }
+        .team-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            margin-top: 20px;
+        }
+        .team-member {
+            text-align: center;
+        }
+        .team-member img {
+            width: 100px;
+            border-radius: 10px;
+        }
+        .meme {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .falling-dollar {
+            position: absolute;
+            font-size: 50px;
+            color: #00ff00;
+            top: -10%;
+            animation: fall 5s linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-10vh); }
+            100% { transform: translateY(100vh); }
+        }
+        .roadmap {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+        }
+        .milestone {
+            width: 150px;
+            height: 150px;
+            background-color: #ff6666;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            position: relative;
+            border: 4px solid #fff;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+            overflow: hidden;
+            margin: 20px auto;
+        }
+        .milestone img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .info-link {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+            text-decoration: underline;
+            cursor: pointer;
+            color: #ffcc66;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">CREATED FOR THE PEOPLE IN NEED</div>
+    
+    <div class="team-section">
+        <div class="team-member">
+            <img src="V.jpg" alt="Vitalik Buterin">
+            <p><strong>Token Creator</strong></p>
+            <a href="https://ca.linkedin.com/in/vitalik-buterin-267a7450" target="_blank">Vitalik Buterin</a>
+        </div>
+        <img src="bank.jpg" alt="Guy In Bankruptcy" class="meme">
+        <div class="team-member">
+            <img src="W.jpg" alt="Werner Vogels">
+            <p><strong>Chief Technology Officer</strong></p>
+            <a href="https://www.linkedin.com/in/wernervogels" target="_blank">Werner Hans Peter Vogels</a>
+        </div>
+    </div>
+
+    <div class="roadmap">
+        <h2>Future Roadmap</h2>
+        <div class="milestone"><img src="comp_bot.jpg" alt="Comp Bot"></div>
+        <span class="info-link" onclick="window.location='tradebot.html'">CLICK HERE FOR 99.6% Strategy Auto Trading Bot</span>
+        <div class="milestone"><img src="virtual_agent.jpg" alt="Virtual Agent"></div>
+        <span class="info-link">I can predict the future price of stocks/crypto (Click here)</span>
+        <div class="milestone"><img src="Money.jpg" alt="money"></div>
+        <span>Every token holder will receive $5.00 in USDC Airdrop, increasing every $500K market cap!</span>
+    </div>
+
+    <div class="container">
+        <h2>White Paper and Tokenomics Coming Soon</h2>
+        <h3>STAY TUNED</h3>
+        <p>Buy at <a href="https://www.dexscreener.com" target="_blank">DEXSCREENER.COM</a> or your favorite Solana Meme Coin Trader.</p>
+    </div>
+
+    <script>
+        function createFallingDollars() {
+            for (let i = 0; i < 10; i++) {
+                let dollar = document.createElement("div");
+                dollar.innerHTML = "&#36;"; // Dollar sign
+                dollar.classList.add("falling-dollar");
+                dollar.style.left = Math.random() * window.innerWidth + "px";
+                dollar.style.animationDuration = (Math.random() * 3 + 3) + "s";
+                document.body.appendChild(dollar);
+            }
+        }
+        createFallingDollars();
+        setInterval(createFallingDollars, 3000);
+    </script>
+</body>
+</html>
